@@ -304,7 +304,7 @@
 
                                         <div class="mt-1">
                                             <button class="btn btn-primary float-end" type="button"
-                                                onclick="event.preventDefault();confirm('Do you want to book this schedule?','Double check your provided credentials before proceeding 💭.', 'Yes').then(res => res.isConfirmed ? $('#booking_form').submit() : false)">
+                                                onclick="event.preventDefault();confirm('Do you want to book this schedule?','Would you like to proceed? If you need to reschedule, contact us at +639663815639, and please verify your credentials before confirming your booking 💭.', 'Yes').then(res => res.isConfirmed ? $('#booking_form').submit() : false)">
                                                 Book Now
                                             </button>
                                         </div>
