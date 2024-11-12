@@ -52,10 +52,9 @@
                         <li class="nav-item">
                             <a href="{{ route('main.pages.about') }}"
                                 class="nav-link @if (Route::is('main.pages.about')) active @endif">
-                                <span class="nav-link-inner--text">About Us</span>
+                                <span class="nav-link-inner--text">About</span>
                             </a>
                         </li>
-
 
                         @auth
                             @if (auth()->user()->hasRole('admin'))
@@ -72,6 +71,8 @@
                                 </li>
                             @endif
 
+                            <!-- Commented Out Appointment Links -->
+                            <!--
                             @if (auth()->user()->hasRole('admin'))
                                 <li class="nav-item">
                                     <a href="{{ route('admin.bookings.index') }}" class="nav-link">
@@ -85,7 +86,7 @@
                                     </a>
                                 </li>
                             @endif
-
+                            -->
                         @endauth
 
                         @guest
@@ -94,10 +95,12 @@
                                     <span class="nav-link-inner--text">Services</span>
                                 </a>
                             </li>
+                            <!-- Commented Out Appointment Links -->
+                            <!--
                             <a href="{{ route('customer.services.index') }}" class="nav-link">
                                 <span class="nav-link-inner--text"> Appointment</span>
                             </a>
-                            </li>
+                            -->
                         @endguest
 
                         <li class="nav-item">
@@ -106,8 +109,6 @@
                                 <span class="nav-link-inner--text">FAQS</span>
                             </a>
                         </li>
-
-
                     </ul>
                     <hr class="d-lg-none" />
                     <ul class="navbar-nav align-items-lg-center ml-lg-auto">
@@ -176,7 +177,6 @@
     <!-- Main content -->
     <main class="main-content">
         @yield('content')
-
     </main>
 
     @if (
@@ -197,7 +197,6 @@
     @yield('script')
 
     @routes()
-
 </body>
 
 </html>

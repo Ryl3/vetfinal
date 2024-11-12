@@ -3,6 +3,12 @@
 @section('title', "$app_name | Login")
 
 @section('content')
+<style>/* Add active color to navbar links when active */
+.navbar-nav .nav-item .nav-link.active {
+    color: #ffbb00; /* Your desired active link color */
+    font-weight: bold;
+}
+</style>
 <header>
     <!-- Navbar -->
     <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg bg-primary py-2">
@@ -28,7 +34,7 @@
                         <li class="nav-item">
                             <a href="{{ route('main.pages.about') }}"
                                 class="nav-link @if (Route::is('main.pages.about')) active @endif">
-                                <span class="nav-link-inner--text">About Us</span>
+                                <span class="nav-link-inner--text">About</span>
                             </a>
                         </li>
 
@@ -48,7 +54,7 @@
                                 </li>
                             @endif
 
-                            @if (auth()->user()->hasRole('admin'))
+                            {{-- @if (auth()->user()->hasRole('admin'))
                                 <li class="nav-item">
                                     <a href="{{ route('admin.bookings.index') }}" class="nav-link">
                                         <span class="nav-link-inner--text"> Appointment</span>
@@ -60,7 +66,7 @@
                                         <span class="nav-link-inner--text"> Appointment</span>
                                     </a>
                                 </li>
-                            @endif
+                            @endif --}}
 
                         @endauth
 
@@ -70,9 +76,10 @@
                                     <span class="nav-link-inner--text">Services</span>
                                 </a>
                             </li>
-                            <a href="{{ route('customer.services.index') }}" class="nav-link">
+
+                            {{-- <a href="{{ route('customer.services.index') }}" class="nav-link">
                                 <span class="nav-link-inner--text"> Appointment</span>
-                            </a>
+                            </a> --}}
                             </li>
                         @endguest
 
@@ -87,14 +94,15 @@
                     </ul>
 
                 <ul class="navbar-nav align-items-lg-center ml-lg-auto">
-                    @guest
-                        <li class="nav-item">
-                            <a href="{{ route('auth.login') }}" class="nav-link">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('auth.register') }}" class="nav-link">Register</a>
-                        </li>
-                    @endguest
+                @guest
+    <li class="nav-item">
+        <a href="{{ route('auth.login') }}" class="nav-link @if (Route::is('auth.login')) active @endif">Login</a>
+    </li>
+    <li class="nav-item">
+        <a href="{{ route('auth.register') }}" class="nav-link @if (Route::is('auth.register')) active @endif">Register</a>
+    </li>
+@endguest
+
 
                     @auth
                         <li class="nav-item dropdown">

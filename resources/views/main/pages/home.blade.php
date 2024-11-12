@@ -7,58 +7,43 @@
             <ol class="carousel-indicators">
                 <li data-target="#template-mo-zay-hero-carousel" data-slide-to="0" class="active" aria-current="true"></li>
                 <li data-target="#template-mo-zay-hero-carousel" data-slide-to="1"></li>
-                <li data-target="#template-mo-zay-hero-carousel" data-slide-to="2" class=""></li>
+                <li data-target="#template-mo-zay-hero-carousel" data-slide-to="2"></li>
             </ol>
+
             <div class="carousel-inner p-5" style="
-                height: 65vh; 
-                background-image: url('{{ asset('img/main/section-1/dog.png') }}') !important; 
-                background-size: cover; 
-                background-position: center; 
+                height: 65vh;
+                background-image: url('{{ asset('img/main/section-1/dog.png') }}');
+                background-size: cover;
+                background-position: center;
                 background-repeat: no-repeat;
-                padding-top: 0; /* Adjust padding if needed */
-                margin-top: -80px; /* Adjust to the height of your navbar */
-            ">  
+                margin-top: -80px;
+            ">
                 <div class="carousel-item active carousel-item-start" id="carousel-item-1">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6"></div> <!-- Empty left column or any content -->
-                            <div class="col-lg-6 mb-0 d-flex align-items-center justify-content-end">
-                                <div class="text-align-center align-self-center" style="margin-top: 200px;">
-                                    <h1 class="display-3 text-capitalize text-white">Your Pet's Wellness, Our Priority</h1>
-                                    <p class="text-white">Welcome to Central Bark Veterinary Clinic, where trust and comfort are priorities.</p>
-                                    <a class="btn btn-success" href="/about">Read more</a>
-                                </div>
-                            </div>
+                    <div class="container d-flex justify-content-center align-items-center" style="height: 100%; margin-top: 210px;">
+                        <div class="text-align-center align-self-center text-center">
+                            <h1 class="display-3 text-capitalize text-white">Your Pet's Wellness, Our Priority</h1>
+                            <p class="text-white">Welcome to Central Bark Veterinary Clinic, where trust and comfort are priorities.</p>
+                            <a class="btn btn-success" href="/about">Read more</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="carousel-item carousel-item-next carousel-item-start" id="carousel-item-2">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6"></div> <!-- Empty left column or any content -->
-                            <div class="col-lg-6 mb-0 d-flex align-items-center justify-content-end">
-                                <div class="text-align-center align-self-center" style="margin-top: 200px;">
-                                    <h1 class="display-3 text-capitalize text-white">Nurturing Health, Pawsitively</h1>
-                                    <p class="text-white">Trust us to nurture their health with a positive touch, ensuring a lifetime of love and vitality.</p>
-                                    <a class="btn btn-success" href="/about">Read more</a>
-                                </div>
-                            </div>
+                    <div class="container d-flex justify-content-center align-items-center" style="height: 100%; margin-top: 210px;">
+                        <div class="text-align-center align-self-center text-center">
+                            <h1 class="display-3 text-capitalize text-white">Nurturing Health, Pawsitively</h1>
+                            <p class="text-white">Trust us to nurture their health with a positive touch, ensuring a lifetime of love and vitality.</p>
+                            <a class="btn btn-success" href="/about">Read more</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="carousel-item" id="carousel-item-3">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6"></div> <!-- Empty left column or any content -->
-                            <div class="col-lg-6 mb-0 d-flex align-items-center justify-content-end">
-                                <div class="text-align-center align-self-center" style="margin-top: 200px;">
-                                    <h1 class="display-3 text-capitalize text-white">Your Partner in Pet Wellbeing</h1>
-                                    <p class="text-white">Together, let's ensure their wellbeing and create unforgettable memories filled with wagging tails and purring contentment.</p>
-                                    <a class="btn btn-success" href="/about">Read more</a>
-                                </div>
-                            </div>
+                    <div class="container d-flex justify-content-center align-items-center" style="height: 100%; margin-top: 210px;">
+                        <div class="text-align-center align-self-center text-center">
+                            <h1 class="display-3 text-capitalize text-white">Your Partner in Pet Wellbeing</h1>
+                            <p class="text-white">Together, let's ensure their wellbeing and create unforgettable memories filled with wagging tails and purring contentment.</p>
+                            <a class="btn btn-success" href="/about">Read more</a>
                         </div>
                     </div>
                 </div>
@@ -79,8 +64,8 @@
         <div class="container">
             <div class="row text-center pt-3">
                 <div class="col-lg-6 m-auto">
-                    <h1 class="d-md-block text-primary font-weight-normal"> Our Services <i class="fas fa-clipboard-list ml-1"></i></h1>
-                    <p> We offer a comprehensive range of veterinary services designed to keep your pets healthy and thriving</p>
+                    <h1 class="d-md-block text-primary font-weight-normal">Our Services <i class="fas fa-clipboard-list ml-1"></i></h1>
+                    <p>We offer a comprehensive range of veterinary services designed to keep your pets healthy and thriving.</p>
                 </div>
             </div>
 
@@ -88,8 +73,8 @@
                 @foreach ($services as $service)
                     <div class="col-md-4 col-lg-4 d-flex services align-self-stretch">
                         <div class="card w-100 card-shadow-none hoverable rounded">
-                            <div class="card-body d-flex and flex-column text-center text-small p-0">
-                                <img class="img-fluid d-block mx-auto " src="{{ asset('img/service/paw.png') }}" width="100" alt="service">
+                            <div class="card-body d-flex flex-column text-center text-small p-0">
+                                <img class="img-fluid d-block mx-auto" src="{{ asset('img/service/paw.png') }}" width="100" alt="service">
                             </div>
                             <div class="card-footer border-0 pt-1 pb-2 text-center">
                                 <h3 class="font-weight-bold">
@@ -110,37 +95,69 @@
     </section>
     {{-- End Section 2 --}}
 
-    {{-- Team of Amazing Experts Section --}}
-<section class="py-2 py-md-0"> <!-- Reduced padding on the section -->
-    <div class="container">
-        <div class="row text-center pt-3">
-            <div class="col-lg-6 m-auto">
-                <h1 class="d-md-block text-primary font-weight-normal"> Team of Amazing Experts <i class="fas fa-users ml-1"></i></h1>
-                <p> At Central Bark Veterinary Clinic, our dedicated team of experienced professionals ensures that your furry companions receive the best possible care. Each expert brings unique skills to our practice, all focused on the well-being of your pets.</p>
+    {{-- About Us Section --}}
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-8 m-auto">
+                    <h1 class="d-md-block text-primary font-weight-normal">About Us <i class="fas fa-paw ml-1"></i></h1>
+                    <p class="gradient-text">
+                        “Our shop was founded in Tungkop, Minglanilla, Cebu and has been a beloved
+                        part of the community. With our commitment to providing exceptional services
+                        for pets and their owners, we have expanded to include a branch in Tungkop,
+                        Minglanilla, Cebu, ensuring that even more furry friends and their families
+                        have access to top-quality care.
+                    </p>
+                    <p"gradient-text">
+                        At Central Bark Clinic, we understand the special bond between pets and their
+                        owners. That's why we strive carefully selected to meet the unique needs of every
+                        pet. Our knowledgeable and friendly staff are here to assist you in finding the
+                        perfect items for your furry companions. Whether you're a seasoned pet parent or
+                        a first-time pet owner, we're dedicated to providing you with the support and
+                        resources you need to give your pets the happy, healthy lives they deserve.
+                        Visit us at either of our convenient locations in Tungkop, Minglanilla, Cebu and
+                        let us be your trusted partner in pet care.
+                    </p>
+                </div>
             </div>
         </div>
+        <center>
+            <hr class="w-75">
+        </center>
+    </section>
+    {{-- End About Us Section --}}
 
-        <div class="row mt-2 justify-content-center">
-    <div class="col-md-4 text-center">
-        <h3 class="font-weight-bold">Jeniphyr M. Largo</h3>
-        <img style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);" src="{{ asset('img/team/t1.jpg') }}" alt="Expert 1">
-    </div>
-    <div class="col-md-4 text-center">
-        <h3 class="font-weight-bold">Sin Causing</h3>
-        <img style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);" src="{{ asset('img/team/t2.jpg') }}" alt="Expert 2">
-    </div>
-    <div class="col-md-4 text-center">
-        <h3 class="font-weight-bold">Camly Galingan</h3>
-        <img style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);" src="{{ asset('img/team/t3.jpg') }}" alt="Expert 3">
-    </div>
-</div>
+    {{-- Team of Amazing Experts Section --}}
+    <section class="py-2 py-md-0">
+        <div class="container">
+            <div class="row text-center pt-3">
+                <div class="col-lg-6 m-auto">
+                    <h1 class="d-md-block text-primary font-weight-normal"> Team of Amazing Experts <i class="fas fa-users ml-1"></i></h1>
+                    <p> At Central Bark Veterinary Clinic, our dedicated team of experienced professionals ensures that your furry companions receive the best possible care. Each expert brings unique skills to our practice, all focused on the well-being of your pets.</p>
+                </div>
+            </div>
 
-    </div>
-    <center>
-        <hr class="w-75">
-    </center>
-</section>
-{{-- End Team of Amazing Experts Section --}}
+            <div class="row mt-2 justify-content-center">
+                <div class="col-md-4 text-center">
+                    <h3 class="font-weight-bold">Jeniphyr M. Largo</h3>
+                    <img style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);" src="{{ asset('img/team/t1.jpg') }}" alt="Expert 1">
+                </div>
+                <div class="col-md-4 text-center">
+                    <h3 class="font-weight-bold">Sin Causing</h3>
+                    <img style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);" src="{{ asset('img/team/t2.jpg') }}" alt="Expert 2">
+                </div>
+                <div class="col-md-4 text-center">
+                    <h3 class="font-weight-bold">Camly Galingan</h3>
+                    <img style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);" src="{{ asset('img/team/t3.jpg') }}" alt="Expert 3">
+                </div>
+            </div>
+        </div>
+        <center>
+            <hr class="w-75">
+        </center>
+    </section>
+    {{-- End Team of Amazing Experts Section --}}
+
 
 
     {{-- Section 4 --}}
